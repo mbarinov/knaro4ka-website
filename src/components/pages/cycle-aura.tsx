@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { Reveal, SiteFooter, SiteNavigation } from "../site-components";
+import { SiteFooter, SiteNavigation } from "../site-components";
+import { Reveal } from "../interactions/reveal";
 /** Layout and content migrated from the captured original. No Framer runtime. */
 export default function CycleAuraPage() {
   return (
@@ -127,7 +128,7 @@ export default function CycleAuraPage() {
           </p>
         </div>
       </Reveal>
-      <div className={"framer-1soqfr4 hidden-1xda2km"}>
+      <div className={"framer-1soqfr4 cycle-hero-gallery"} id="1vc2ih7">
         <div className={"ssr-variant"}>
           <div className={"framer-3uv9gh"}>
             <div
@@ -145,10 +146,11 @@ export default function CycleAuraPage() {
               data-framer-background-image-wrapper={"true"}
             >
               <Image
+                loading="eager"
                 width={"1608"}
                 height={"2154"}
                 sizes={
-                  "(min-width: 1200px) max(339.0377px, 284px), (max-width: 809.98px) max(339.0377px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                 }
                 src={"/assets/257e6f8bfacb.png"}
                 alt={""}
@@ -163,7 +165,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -185,12 +186,14 @@ export default function CycleAuraPage() {
               data-framer-background-image-wrapper={"true"}
             >
               <Image
+                loading="eager"
                 width={"1608"}
                 height={"2154"}
                 sizes={
-                  "(min-width: 1200px) max(339.6153px, 284px), (max-width: 809.98px) max(339.6153px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 340px"
                 }
                 src={"/assets/b77835e7e6a3.png"}
+                quality={85}
                 alt={""}
                 style={
                   {
@@ -203,7 +206,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -225,10 +227,11 @@ export default function CycleAuraPage() {
               data-framer-background-image-wrapper={"true"}
             >
               <Image
+                loading="eager"
                 width={"1608"}
                 height={"2154"}
                 sizes={
-                  "(min-width: 1200px) max(339.0377px, 284px), (max-width: 809.98px) max(339.0377px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                 }
                 src={"/assets/93319df78041.png"}
                 alt={""}
@@ -243,7 +246,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -408,7 +410,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -484,7 +485,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -928,7 +928,6 @@ export default function CycleAuraPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -1005,7 +1004,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1317,7 +1315,6 @@ export default function CycleAuraPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1392,7 +1389,6 @@ export default function CycleAuraPage() {
                   objectFit: "cover",
                 } as CSSProperties
               }
-              unoptimized
             />
           </div>
         </div>
@@ -1689,7 +1685,6 @@ export default function CycleAuraPage() {
                     objectFit: "contain",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1765,7 +1760,6 @@ export default function CycleAuraPage() {
                     objectFit: "contain",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1999,131 +1993,7 @@ export default function CycleAuraPage() {
           </div>
         </div>
       </Reveal>
-      <div
-        className={"framer-1vc2ih7 hidden-1v1l4ls hidden-1nerdrm"}
-        id={"1vc2ih7"}
-      >
-        <div className={"ssr-variant"}>
-          <div className={"framer-rqc71p"}>
-            <div
-              style={
-                {
-                  position: "absolute",
-                  borderRadius: "inherit",
-                  cornerShape: "inherit",
-                  top: "0",
-                  right: "0",
-                  bottom: "0",
-                  left: "0",
-                } as CSSProperties
-              }
-              data-framer-background-image-wrapper={"true"}
-            >
-              <Image
-                width={"1608"}
-                height={"2154"}
-                sizes={
-                  "(min-width: 1200px) max(339.0377px, 284px), (max-width: 809.98px) max(339.0377px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
-                }
-                src={"/assets/257e6f8bfacb.png"}
-                alt={""}
-                style={
-                  {
-                    display: "block",
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "inherit",
-                    cornerShape: "inherit",
-                    objectPosition: "center",
-                    objectFit: "cover",
-                  } as CSSProperties
-                }
-                unoptimized
-              />
-            </div>
-          </div>
-        </div>
-        <div className={"ssr-variant"}>
-          <div className={"framer-wy1n2"}>
-            <div
-              style={
-                {
-                  position: "absolute",
-                  borderRadius: "inherit",
-                  cornerShape: "inherit",
-                  top: "0",
-                  right: "0",
-                  bottom: "0",
-                  left: "0",
-                } as CSSProperties
-              }
-              data-framer-background-image-wrapper={"true"}
-            >
-              <Image
-                width={"1608"}
-                height={"2154"}
-                sizes={
-                  "(min-width: 1200px) max(339.6153px, 284px), (max-width: 809.98px) max(339.6153px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
-                }
-                src={"/assets/b77835e7e6a3.png"}
-                alt={""}
-                style={
-                  {
-                    display: "block",
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "inherit",
-                    cornerShape: "inherit",
-                    objectPosition: "center",
-                    objectFit: "cover",
-                  } as CSSProperties
-                }
-                unoptimized
-              />
-            </div>
-          </div>
-        </div>
-        <div className={"ssr-variant"}>
-          <div className={"framer-16yw2t6"}>
-            <div
-              style={
-                {
-                  position: "absolute",
-                  borderRadius: "inherit",
-                  cornerShape: "inherit",
-                  top: "0",
-                  right: "0",
-                  bottom: "0",
-                  left: "0",
-                } as CSSProperties
-              }
-              data-framer-background-image-wrapper={"true"}
-            >
-              <Image
-                width={"1608"}
-                height={"2154"}
-                sizes={
-                  "(min-width: 1200px) max(339.0377px, 284px), (max-width: 809.98px) max(339.0377px, 284px), (min-width: 810px) and (max-width: 1199.98px) max(244px, 284px)"
-                }
-                src={"/assets/93319df78041.png"}
-                alt={""}
-                style={
-                  {
-                    display: "block",
-                    width: "100%",
-                    height: "100%",
-                    borderRadius: "inherit",
-                    cornerShape: "inherit",
-                    objectPosition: "center",
-                    objectFit: "cover",
-                  } as CSSProperties
-                }
-                unoptimized
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div
         data-framer-component-type={"SVG"}
         className={"framer-1pf3a2c"}

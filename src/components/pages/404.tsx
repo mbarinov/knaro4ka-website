@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { Reveal, SiteFooter, SiteNavigation } from "../site-components";
+import { SiteFooter, SiteNavigation } from "../site-components";
+import { Reveal } from "../interactions/reveal";
 /** Layout and content migrated from the captured original. No Framer runtime. */
 export default function NotFoundPage() {
   return (

@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { Ticker } from "./interactions";
-export { Reveal, Ticker, TiltCard, ParallaxHeading } from "./interactions";
+import { Ticker } from "./interactions/ticker";
 
 export function SiteNavigation({ caseStudy = false }: { caseStudy?: boolean }) {
   return (

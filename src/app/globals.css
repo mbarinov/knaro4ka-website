@@ -249,6 +249,26 @@ html.lenis body {
   height: auto;
 }
 
+/* One Cycle Aura hero for all breakpoints; preserve the original mobile rail. */
+@media (max-width: 809.98px) {
+  .framer-0GpGH .cycle-hero-gallery {
+    order: 3;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    width: 390px;
+    padding: 0 0 0 16px;
+    scroll-margin-top: 100px;
+    overflow: auto;
+  }
+  .framer-0GpGH .cycle-hero-gallery .framer-3uv9gh,
+  .framer-0GpGH .cycle-hero-gallery .framer-oec7s9,
+  .framer-0GpGH .cycle-hero-gallery .framer-fz62yb {
+    width: 284px;
+    height: 382px;
+  }
+}
+
 /* Framer's original 270° wipe becomes a 360° gradient with a 100% soft edge. */
 .page-transition-content {
   /* Keep the page inside the root snapshot instead of morphing its full height. */

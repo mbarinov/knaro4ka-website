@@ -1,12 +1,9 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import {
-  Reveal,
-  SiteFooter,
-  SiteNavigation,
-  Ticker,
-  TiltCard,
-} from "../site-components";
+import { SiteFooter, SiteNavigation } from "../site-components";
+import { Reveal } from "../interactions/reveal";
+import { Ticker } from "../interactions/ticker";
+import { TiltCard } from "../interactions/tilt-card";
 /** Layout and content migrated from the captured original. No Framer runtime. */
 export default function HomePage() {
   return (
@@ -133,11 +130,10 @@ export default function HomePage() {
                     data-framer-background-image-wrapper={"true"}
                   >
                     <Image
+                      loading="eager"
                       width={"736"}
                       height={"970"}
-                      sizes={
-                        "(min-width: 1200px) 200px, (min-width: 810px) and (max-width: 1199.98px) 200px, (max-width: 809.98px) 200px"
-                      }
+                      sizes={"200px"}
                       src={"/assets/d44ce6cbc063.avif"}
                       alt={""}
                       style={
@@ -176,11 +172,10 @@ export default function HomePage() {
                     data-framer-background-image-wrapper={"true"}
                   >
                     <Image
+                      loading="eager"
                       width={"1008"}
                       height={"1008"}
-                      sizes={
-                        "(min-width: 1200px) 200px, (min-width: 810px) and (max-width: 1199.98px) 200px, (max-width: 809.98px) 200px"
-                      }
+                      sizes={"200px"}
                       src={"/assets/433527337bf7.png"}
                       alt={""}
                       style={
@@ -194,7 +189,6 @@ export default function HomePage() {
                           objectFit: "cover",
                         } as CSSProperties
                       }
-                      unoptimized
                     />
                   </div>
                   <div
@@ -406,9 +400,7 @@ export default function HomePage() {
                       }
                       src={"/assets/48de8cc805a9.avif"}
                       alt={""}
-                      sizes={
-                        "(min-width: 1200px) 100vw, (min-width: 810px) and (max-width: 1199.98px) 100vw, (max-width: 809.98px) 100vw"
-                      }
+                      sizes={"200px"}
                       width={909}
                       height={1218}
                       unoptimized
@@ -497,12 +489,9 @@ export default function HomePage() {
                       }
                       src={"/assets/257e6f8bfacb.png"}
                       alt={""}
-                      sizes={
-                        "(min-width: 1200px) 100vw, (min-width: 810px) and (max-width: 1199.98px) 100vw, (max-width: 809.98px) 100vw"
-                      }
+                      sizes={"200px"}
                       width={1608}
                       height={2154}
-                      unoptimized
                     />
                     <div
                       style={

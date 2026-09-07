@@ -1,13 +1,9 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import {
-  ParallaxHeading,
-  Reveal,
-  ServicesTicker,
-  SiteFooter,
-  SiteNavigation,
-  Ticker,
-} from "../site-components";
+import { ServicesTicker, SiteFooter, SiteNavigation } from "../site-components";
+import { ParallaxHeading } from "../interactions/parallax-heading";
+import { Reveal } from "../interactions/reveal";
+import { Ticker } from "../interactions/ticker";
 /** Layout and content migrated from the captured original. No Framer runtime. */
 export default function AboutPage() {
   return (
@@ -166,10 +162,11 @@ export default function AboutPage() {
                   data-framer-background-image-wrapper={"true"}
                 >
                   <Image
+                    loading="eager"
                     width={"1278"}
                     height={"1598"}
                     sizes={
-                      "(min-width: 1200px) calc((100vw - 40px) / 3.477), (max-width: 809.98px) calc((100vw - 32px) * 0.6), (min-width: 810px) and (max-width: 1199.98px) calc((100vw - 40px) * 0.4)"
+                      "(max-width: 809.98px) calc((100vw - 32px) * 0.6), (max-width: 1199.98px) calc((100vw - 40px) * 0.4), calc((100vw - 40px) * 0.29)"
                     }
                     src={"/assets/f6c773baa9fc.png"}
                     alt={""}
@@ -184,7 +181,6 @@ export default function AboutPage() {
                         objectFit: "cover",
                       } as CSSProperties
                     }
-                    unoptimized
                   />
                 </div>
               </Reveal>

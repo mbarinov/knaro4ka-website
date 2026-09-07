@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { Reveal, SiteFooter, SiteNavigation } from "../site-components";
+import { SiteFooter, SiteNavigation } from "../site-components";
+import { Reveal } from "../interactions/reveal";
 /** Layout and content migrated from the captured original. No Framer runtime. */
 export default function VocaoPage() {
   return (
@@ -170,7 +171,7 @@ export default function VocaoPage() {
                   width={"699"}
                   height={"937"}
                   sizes={
-                    "(min-width: 1200px) max(284px, 339.0377px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.0377px)"
+                    "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                   }
                   src={"/assets/b744095401b4.webp"}
                   alt={""}
@@ -185,7 +186,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function VocaoPage() {
                   width={"699"}
                   height={"937"}
                   sizes={
-                    "(min-width: 1200px) max(284px, 339.0377px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.0377px)"
+                    "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                   }
                   src={"/assets/598044d881fe.webp"}
                   alt={""}
@@ -225,7 +225,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -250,7 +249,7 @@ export default function VocaoPage() {
                   width={"699"}
                   height={"937"}
                   sizes={
-                    "(min-width: 1200px) max(284px, 339.6153px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.6153px)"
+                    "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 340px"
                   }
                   src={"/assets/b52cf75121be.webp"}
                   alt={""}
@@ -265,7 +264,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -293,7 +291,7 @@ export default function VocaoPage() {
                 width={"699"}
                 height={"937"}
                 sizes={
-                  "(min-width: 1200px) max(284px, 339.0377px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.0377px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                 }
                 src={"/assets/b744095401b4.webp"}
                 alt={""}
@@ -308,7 +306,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -333,7 +330,7 @@ export default function VocaoPage() {
                 width={"699"}
                 height={"937"}
                 sizes={
-                  "(min-width: 1200px) max(284px, 339.6153px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.6153px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 340px"
                 }
                 src={"/assets/b52cf75121be.webp"}
                 alt={""}
@@ -348,7 +345,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -373,7 +369,7 @@ export default function VocaoPage() {
                 width={"699"}
                 height={"937"}
                 sizes={
-                  "(min-width: 1200px) max(284px, 339.0377px), (min-width: 810px) and (max-width: 1199.98px) max(284px, 244px), (max-width: 809.98px) max(284px, 339.0377px)"
+                  "(max-width: 809.98px) 284px, (max-width: 1199.98px) 244px, 339px"
                 }
                 src={"/assets/598044d881fe.webp"}
                 alt={""}
@@ -388,7 +384,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -399,7 +394,8 @@ export default function VocaoPage() {
         data-framer-name={"showcase video"}
       >
         <video
-          src={"/assets/42e209336fc2.mp4"}
+          src={"/assets/efbed6ee263d.mp4"}
+          poster="/assets/669855084faa.webp"
           preload="metadata"
           controls
           playsInline
@@ -531,7 +527,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -607,7 +602,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1015,7 +1009,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -1091,7 +1084,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -1408,7 +1400,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
@@ -1483,7 +1474,6 @@ export default function VocaoPage() {
                       objectFit: "cover",
                     } as CSSProperties
                   }
-                  unoptimized
                 />
               </div>
             </div>
@@ -1743,7 +1733,6 @@ export default function VocaoPage() {
                     objectFit: "cover",
                   } as CSSProperties
                 }
-                unoptimized
               />
             </div>
           </div>
