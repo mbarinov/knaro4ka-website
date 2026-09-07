@@ -7,11 +7,10 @@ const path = (relative) => fileURLToPath(new URL(relative, root));
 const source = path("assets/branding/knara-character.png");
 const paper = "#F3F0E8";
 
-// A tight head crop keeps the original pixel art legible at favicon sizes.
+// Preserve the complete supplied character on a light background.
 async function icon(size) {
   const inset = Math.max(1, Math.round(size * 0.1));
-  const head = await sharp(source)
-    .extract({ left: 225, top: 0, width: 540, height: 480 })
+  const character = await sharp(source)
     .resize(size - inset * 2, size - inset * 2, {
       fit: "contain",
       kernel: "nearest",
@@ -23,7 +22,7 @@ async function icon(size) {
   return sharp({
     create: { width: size, height: size, channels: 4, background: paper },
   })
-    .composite([{ input: head, left: inset, top: inset }])
+    .composite([{ input: character, left: inset, top: inset }])
     .ensureAlpha()
     .png()
     .toBuffer();
