@@ -5,15 +5,29 @@ import sharp from "sharp";
 const root = new URL("../", import.meta.url);
 const path = (relative) => fileURLToPath(new URL(relative, root));
 const source = path("assets/branding/knara-character.png");
+const paper = "#F3F0E8";
 
-// Mechanical resizing preserves the supplied artwork, without redrawing it.
-const icon = (size) =>
-  sharp(source)
-    .resize(size, size, { fit: "contain", background: "#000000" })
-    .flatten({ background: "#000000" })
+// A tight head crop keeps the original pixel art legible at favicon sizes.
+async function icon(size) {
+  const inset = Math.max(1, Math.round(size * 0.1));
+  const head = await sharp(source)
+    .extract({ left: 225, top: 0, width: 540, height: 480 })
+    .resize(size - inset * 2, size - inset * 2, {
+      fit: "contain",
+      kernel: "nearest",
+      background: paper,
+    })
+    .flatten({ background: paper })
+    .png()
+    .toBuffer();
+  return sharp({
+    create: { width: size, height: size, channels: 4, background: paper },
+  })
+    .composite([{ input: head, left: inset, top: inset }])
     .ensureAlpha()
     .png()
     .toBuffer();
+}
 
 await mkdir(path("public/og"), { recursive: true });
 await writeFile(path("src/app/icon.png"), await icon(192));
@@ -42,12 +56,19 @@ const text = Buffer.from(`<svg width="1200" height="630" xmlns="http://www.w3.or
   <text x="64" y="295" fill="white" font-family="Arial, sans-serif" font-size="64" font-weight="700">Knara Sobchak</text>
   <text x="64" y="355" fill="white" font-family="Arial, sans-serif" font-size="32">Product Designer</text>
 </svg>`);
-const character = await icon(480);
+const character = await sharp(source)
+  .resize(432, 432, { kernel: "nearest" })
+  .png()
+  .toBuffer();
+const card = Buffer.from(`<svg width="480" height="502" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="502" rx="32" fill="${paper}"/>
+</svg>`);
 await sharp({
   create: { width: 1200, height: 630, channels: 3, background: "#000000" },
 })
   .composite([
-    { input: character, left: 656, top: 75 },
+    { input: card, left: 656, top: 64 },
+    { input: character, left: 680, top: 99 },
     { input: text, left: 0, top: 0 },
   ])
   .png()
